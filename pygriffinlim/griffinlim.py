@@ -1,11 +1,7 @@
 import librosa
 import numpy as np
 
-
-DEFAULT_STFT_KWARGS = {
-    "hop_length": 512,
-    "n_fft": 2048,
-}
+from .settings import DEFAULT_STFT_KWARGS
 
 
 def griffin_lim_generator(
@@ -57,14 +53,6 @@ def gla(spectrogram,
     for approximated_signal in generator:
         pass
     return approximated_signal
-
-
-def fast_griffin_lims_generator(
-        spectrogram,
-        iterations=10,
-        alpha=.1,
-        stft_kwargs=DEFAULT_STFT_KWARGS):
-    pass
 
 
 def modified_fast_griffin_lim_generator(
