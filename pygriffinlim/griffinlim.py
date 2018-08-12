@@ -57,12 +57,3 @@ def gla(spectrogram,
     for approximated_signal in generator:
         pass
     return approximated_signal
-
-
-def modified_fast_griffin_lim_generator(
-        spectrogram,
-        iterations,
-        alpha_loc=.1,
-        alpha_scale=.4,
-        stft_kwargs={}):
-    pass
