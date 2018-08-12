@@ -1,5 +1,6 @@
 audioread==2.1.6
 decorator==4.3.0
+duration-generator==0.1
 joblib==0.12.2
 librosa==0.6.2
 llvmlite==0.24.0
