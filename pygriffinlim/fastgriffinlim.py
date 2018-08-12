@@ -1,15 +1,24 @@
 import librosa
 import numpy as np
 
-from .settings import DEFAULT_STFT_KWARGS
-
 
 def fast_griffin_lim_generator(
         spectrogram,
         iterations=10,
         approximated_signal=None,
         alpha=.1,
-        stft_kwargs=DEFAULT_STFT_KWARGS):
+        stft_kwargs={},
+        istft_kwargs={}):
+    """
+
+    :param spectrogram:
+    :param iterations:
+    :param approximated_signal:
+    :param alpha:
+    :param stft_kwargs:
+    :param istft_kwargs:
+    :return:
+    """
     _M = spectrogram
     for k in range(iterations):
         if approximated_signal is None:
@@ -20,7 +29,7 @@ def fast_griffin_lim_generator(
 
         _D = _M * np.exp(1j * _P)
         _M = spectrogram + (alpha * np.abs(_D))
-        approximated_signal = librosa.istft(_D, **stft_kwargs)
+        approximated_signal = librosa.istft(_D, **istft_kwargs)
         yield approximated_signal
 
 
@@ -28,8 +37,20 @@ def fgla(spectrogram,
          iterations=10,
          approximated_signal=None,
          alpha=.1,
-         stft_kwargs=DEFAULT_STFT_KWARGS):
-    generator = fast_griffin_lim_generator(spectrogram, iterations, approximated_signal, alpha, stft_kwargs)
+         stft_kwargs={},
+         istft_kwargs={}):
+    """
+
+    :param spectrogram:
+    :param iterations:
+    :param approximated_signal:
+    :param alpha:
+    :param stft_kwargs:
+    :param istft_kwargs:
+    :return:
+    """
+    generator = fast_griffin_lim_generator(
+        spectrogram, iterations, approximated_signal, alpha, stft_kwargs, istft_kwargs)
     for approximated_signal in generator:
         pass
     return approximated_signal
