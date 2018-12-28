@@ -14,19 +14,19 @@ parser.add_argument(
     "-i",
     dest="input_file",
     required=True,
-    help="Input file of type image."
+    help="Input file of image."
 )
 parser.add_argument(
     "-o",
     dest="output_file",
     required=True,
-    help="Output wav file"
+    help="Output wav file."
 )
 parser.add_argument(
     "-a",
     dest="algorithm",
     required=False,
-    help="Algorithm chosen choices: gl, fgl, mfgl",
+    help="Algorithm chosen choices: gla, fgla, fgla.",
     default="fgla"
 )
 parser.add_argument(
@@ -34,7 +34,7 @@ parser.add_argument(
     dest="n_iterations",
     required=False,
     type=int,
-    help="Number of iterations",
+    help="Number of iterations.",
     default=20
 )
 parser.add_argument(
@@ -42,7 +42,7 @@ parser.add_argument(
     dest="hop_length",
     required=False,
     type=int,
-    help="The hop length between frames, measured in samples, usually n_fft / 2",
+    help="The hop length between frames, measured in samples, usually n_fft / 2.",
     default=512
 )
 parser.add_argument(
@@ -50,7 +50,7 @@ parser.add_argument(
     dest="n_fft",
     required=False,
     type=int,
-    help="",
+    help="The width of the frame in samples.",
     default=2048
 )
 parser.add_argument(
@@ -58,7 +58,7 @@ parser.add_argument(
     dest="sample_rate",
     required=False,
     type=int,
-    help="",
+    help="The samplerate of the output file.",
     default=22050
 )
 
