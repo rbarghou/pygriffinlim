@@ -17,6 +17,10 @@ This is an implementation of 3 different versions of the Griffin Lim algorithm.
 2. The Fast Griffin Lim which converges more quickly
 3. The Modified Fast Griffin Lim which converges to slightly better values.
 
+## CLI Instructions
+
+After installing this package with pip, you can use the command `pygl` which has reasonable help.
+
 ### Full disclosure
 I have not read the Griffin Lim paper very closely, and I expect that my implementation is missing
 crucial aspects.  But this is a practical repository, not an academic one.  So... you know... if you

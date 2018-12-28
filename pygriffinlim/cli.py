@@ -14,7 +14,7 @@ parser.add_argument(
     "-i",
     dest="input_file",
     required=True,
-    help="Input file of image."
+    help="Input file of image.  Should be black and white image with shape (n_frequency_bins, n_frames)"
 )
 parser.add_argument(
     "-o",
