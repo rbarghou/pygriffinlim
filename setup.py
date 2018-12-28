@@ -7,8 +7,9 @@ setup(name='pygriffinlim',
       license='GPL3',
       packages=['pygriffinlim'],
       install_requires=[
-            "numpy",
             "librosa",
+            "imageio",
+            "numpy",
       ],
       entry_points={
             "console_scripts": [
