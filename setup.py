@@ -6,4 +6,13 @@ setup(name='pygriffinlim',
       author='Ramsey Barghouti',
       license='GPL3',
       packages=['pygriffinlim'],
+      install_requires=[
+            "numpy",
+            "librosa",
+      ],
+      entry_points={
+            "console_scripts": [
+                  "pygl=pygriffinlim.cli:main"
+            ]
+      },
       zip_safe=False)
