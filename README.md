@@ -23,5 +23,5 @@ After installing this package with pip, you can use the command `pygl` which has
 
 ### Full disclosure
 I have not read the Griffin Lim paper very closely, and I expect that my implementation is missing
-crucial aspects.  But this is a practical repository, not an academic one.  So... you know... if you
-have a problem with it, do something about it.
+crucial aspects.  But this is a practical repository, not an academic one.  Please report any bugs
+as github issues.
